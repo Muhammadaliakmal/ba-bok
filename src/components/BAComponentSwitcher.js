@@ -3,31 +3,17 @@ import React from 'react';
 import BAButton from './BAButton';
 import BABox from './BABox';
 import BAPera from './BAPera';
-// The following imports are placeholders as the files do not exist yet in this context
-// import BAInput from './BAInput';
-// import BASearchLookup from './BASearchLookup';
-// import BASelect from './BASelect';
-// import BASwitch from './BASwitch';
-// import BADate from './BADate';
-// import BAFieldset from './BAFieldset';
-// import BADragDropFile from './BADragDropFile';
-// import BATextarea from './BATextarea';
-// import BAImagePicker from './BAImagePicker';
-// import BACheckbox from './BACheckbox';
-// import BARadio from './BARadio';
-
-// Placeholder components to prevent build break until actual components are created
-const BAInput = (props) => <div>INPUT PLACEHOLDER</div>;
-const BASearchLookup = (props) => <div>LOOKUP PLACEHOLDER</div>;
-const BASelect = (props) => <div>SELECT PLACEHOLDER</div>;
-const BASwitch = (props) => <div>SWITCH PLACEHOLDER</div>;
-const BADate = (props) => <div>DATE PLACEHOLDER</div>;
-const BAFieldset = (props) => <div>FIELDSET PLACEHOLDER</div>;
-const BADragDropFile = (props) => <div>DRAGFILE PLACEHOLDER</div>;
-const BATextarea = (props) => <div>TEXTAREA PLACEHOLDER</div>;
-const BAImagePicker = (props) => <div>IMAGE PICKER PLACEHOLDER</div>;
-const BACheckbox = (props) => <div>CHECKBOX PLACEHOLDER</div>;
-const BARadio = (props) => <div>RADIO PLACEHOLDER</div>;
+import BAInput from './BAInput';
+import BASearchLookup from './BASearchLookup';
+import BASelect from './BASelect';
+import BASwitch from './BASwitch';
+import BADate from './BADate';
+import BAFieldset from './BAFieldset';
+import BADragDropFile from './BADragDropFile';
+import BATextarea from './BATextarea';
+import BAImagePicker from './BAImagePicker';
+import BACheckbox from './BACheckbox';
+import BARadio from './BARadio';
 
 
 export default function BAComponentSwitcher({

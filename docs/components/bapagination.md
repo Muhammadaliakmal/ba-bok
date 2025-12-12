@@ -74,9 +74,7 @@ The component manages the current pagination state internally using `pageConfig`
 ### External Communication
 The primary function of this component is to inform the parent when the pagination parameters change. This is handled by the `onPageChange` prop, which receives two arguments:
 
-$$
-\text{onPageChange}(\text{newPage}, \text{newSize})
-$$
+`onPageChange(newPage, newSize)`
 
 When the page size is changed via the internal `pageSizeChange` function, the component automatically resets the current page to 1 before calling `onPageChange`.
 

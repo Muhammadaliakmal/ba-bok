@@ -10,6 +10,29 @@ export let displayError = (messageTxt, severity) => { console.warn("displayError
 export let showLoader = (messageTxt) => { console.warn("showLoader not initialized", messageTxt); };
 export let appTheme = {};
 
+// Internal component to capture App context hooks
+const GlobalAppHooks = () => {
+    const { message, modal, notification } = App.useApp();
+
+    React.useEffect(() => {
+        // Bind global functions to Ant Design utilities
+        displayError = (messageTxt, severity = 'error') => {
+            if (severity === 'success') message.success(messageTxt);
+            else if (severity === 'warning') message.warning(messageTxt);
+            else if (severity === 'info') message.info(messageTxt);
+            else message.error(messageTxt);
+        };
+
+        showLoader = (messageTxt, duration = 0) => {
+            message.loading(messageTxt, duration);
+        };
+
+        // Expose more themes/utils if needed here
+    }, [message, modal, notification]);
+
+    return null;
+};
+
 export default function MasterContainer({ colorPrimary, children }) {
 
     appTheme = {
@@ -54,6 +77,7 @@ export default function MasterContainer({ colorPrimary, children }) {
             theme={appTheme}
         >
             <App>
+                <GlobalAppHooks />
                 {children}
             </App>
         </ConfigProvider>

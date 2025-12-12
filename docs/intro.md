@@ -4,16 +4,22 @@ sidebar_position: 1
 
 # Welcome to BASu/te
 
-Welcome to your book! This is a clean, modern documentation site built with a beautiful transparent blue theme.
+Get started with BASuite by installing the package.
 
-## Getting Started
+## Installation
 
-Explore the content using the sidebar navigation. The interface is designed to be intuitive and easy to use.
+You can install the package using npm:
 
-## Features
+```bash
+npm i basuite
+```
 
-- **Clean Design**: A modern, glassmorphism-inspired interface
-- **Easy Navigation**: Find what you need quickly
-- **Responsive**: Works beautifully on all devices
+## Guide
 
-Start exploring the book content from the sidebar!
+Once installed, you can import components directly into your project:
+
+```javascript
+import { BAButton } from 'basuite';
+```
+
+Explore the **Components** section in the sidebar for detailed usage of each component.

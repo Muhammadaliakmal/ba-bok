@@ -64,8 +64,6 @@ export default StyledText;
 
 The `BAPera` component is a pure pass-through wrapper:
 
-$$
-\text{BAPera} \rightarrow \text{HTML } \langle p \rangle
-$$
+BAPera -> HTML &lt;p&gt;
 
 All props are applied directly to the underlying `<p>` tag, allowing complete control over text presentation and responsiveness using standard CSS/Tailwind utilities.

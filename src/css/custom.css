@@ -471,6 +471,40 @@ html {
   animation: fadeInUp 0.5s ease-out;
 }
 
+/* Sidebar and Table of Contents - White Text for Visibility */
+.menu__link,
+.menu__list-item-collapsible,
+.table-of-contents__link,
+.toc-highlight {
+  color: #ffffff !important;
+  opacity: 0.9;
+}
+
+.menu__link:hover,
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary-lightest) !important;
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* Ensure proper specificty for active items */
+.menu__link--active {
+  color: var(--ifm-color-primary-lightest) !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons in Markdown/Global - White Text (Keeping this as it's usually desired) */
+.button {
+  color: #ffffff !important; 
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.8));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
 /* Table of contents */
 .table-of-contents {
   background: var(--glass-bg);
@@ -502,7 +536,7 @@ html {
 }
 
 .hero__title {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 1), rgba(147, 197, 253, 1));
+  background: linear-gradient(135deg, rgba(59, 130, 246, 1), rgb(10, 42, 79));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -510,8 +544,27 @@ html {
 }
 
 .hero__subtitle {
-  color: var(--ifm-color-primary-darker);
+  color: #ffffff; /* White text for "Let's Get Started" description */
   font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Feature Section - White Text */
+.features h3, 
+.features p {
+  color: #ffffff !important;
+  opacity: 0.9;
+}
+
+/* Hero Button - Dark Text on Light Background for Visibility */
+.hero .button--primary {
+  color: #0f172a !important; /* Dark Slate Blue Text */
+  background: #f1f5f9 !important; /* Light Slate Background */
+  border: none;
+}
+.hero .button--primary:hover {
+  background: #e2e8f0 !important;
+  color: #02040a !important;
 }
 
 /* BA Loader Spinner */
