@@ -4,25 +4,13 @@ sidebar_position: 28
 
 # FileUploadToBlob Component
 
-## Description
-
-The `FileUploadToBlob` component is a specialized wrapper around the Ant Design `Upload` component designed to handle file selection and immediately pass the native JavaScript `File` object (often referred to as a "blob" or file reference) to a parent component's handler without initiating an automatic HTTP upload request.
-
-It uses a custom `BAButton` for the upload trigger and hides the default Ant Design upload list for a cleaner interface.
-
-## 📦 Installation / Import
-
-```javascript
-import FileUploadToBlob from "@site/src/components/FileUploadToBlob";
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **Internal Components**: `<BAButton />`.
 *   **External Libraries**: `Upload` (Ant Design).
 *   **External Icons**: `UploadOutlined` (Ant Design Icons).
 
-## 🛠️ Usage
+## ️ Usage
 
 This example demonstrates how to use `FileUploadToBlob` to select a single file and log its details (name and size) to the console without uploading it to a server.
 
@@ -70,7 +58,7 @@ function DocumentUploader() {
 export default DocumentUploader;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 This component extends the standard Ant Design `UploadProps` and adds specific properties for its file handling logic.
 
@@ -83,6 +71,6 @@ This component extends the standard Ant Design `UploadProps` and adds specific p
 | `uploadText` | string | `"Upload"` | The text displayed on the custom `BAButton`. |
 | `...rest` | `UploadProps` | N/A | All other standard Ant Design `Upload` properties (e.g., `listType`, `maxCount`) can be passed through. |
 
-## 🔑 Internal Logic
+##  Internal Logic
 
 The core functionality relies on overriding the `beforeUpload` prop of the Ant Design `Upload` component. By defining this function to call `onFileUpload(file)`, the component prevents the default HTTP upload behavior and instead passes the file object to the consumer component immediately upon selection.

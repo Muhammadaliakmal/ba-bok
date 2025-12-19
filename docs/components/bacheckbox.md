@@ -6,12 +6,6 @@ sidebar_position: 4
 
 A flexible checkbox component with support for single and multiple states.
 
-## Installation
-
-```bash
-npm install basuite
-```
-
 ## Usage
 
 ```jsx

@@ -4,24 +4,12 @@ sidebar_position: 11
 
 # BAFormGrid Component
 
-## Description
-
-The `BAFormGrid` component renders a dynamic, fully editable data table (grid). It is designed for scenarios where users need to **input or modify data row-by-row** (e.g., adding line items to an invoice). It leverages the internal `<BAComponentSwitcher>` to render various form elements directly inside the table cells.
-
-## 📦 Installation / Import
-
-```javascript
-import BAFormGrid from "@site/src/components/BAFormGrid";
-import { PlusOutlined, DeleteOutlined } from "@ant-design/icons"; 
-// plus other internal components like BAComponentSwitcher, BABox, etc.
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **Internal Components**: `<BAComponentSwitcher />`, `<BABox />`, `<BAButton />`, `<BAIconButton />`, `<BALoader />`, `<BAPera />`.
 *   **Icons**: `PlusOutlined`, `DeleteOutlined`.
 
-## 🛠️ Usage
+## ️ Usage
 
 This component requires an array of data objects (`datasourse`) and a definition array (`cols`) mapping column headers to data keys and their corresponding form elements.
 
@@ -69,7 +57,7 @@ function LineItemEditor() {
 export default LineItemEditor;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 | Prop | Type | Description |
 | :--- | :--- | :--- |
@@ -86,7 +74,7 @@ export default LineItemEditor;
 | `updatedArr` | `any[]` | State array used to track only the rows that have been modified. |
 | `setUpdatedArr` | `(data: any[]) => void` | Setter for the `updatedArr` state. |
 
-## 🏗️ Column (cols) Definition Structure
+## ️ Column (cols) Definition Structure
 
 The `cols` prop is an array of objects that determines the rendering and behavior of each table column.
 
@@ -99,7 +87,7 @@ The `cols` prop is an array of objects that determines the rendering and behavio
 | `className` | string | Custom Tailwind CSS classes for the column header and cells. |
 | `width` | string \| number | Custom width style for the column (e.g., '150px'). |
 
-## 🔄 Key Interaction Logic
+##  Key Interaction Logic
 
 ### In-Place Editing
 *   **Component Switching**: The data cell content is rendered either via a custom function (`displayField`) or an editable form element via `<BAComponentSwitcher />`.

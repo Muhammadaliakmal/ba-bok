@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Welcome to BASu/te
+# Welcome to BASuite
 
 Get started with BASuite by installing the package.
 

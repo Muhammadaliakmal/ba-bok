@@ -4,18 +4,7 @@ sidebar_position: 6
 
 # BAComponentSwitcher Component
 
-## Description
-
-The `BAComponentSwitcher` is a highly flexible, **dynamic form element renderer**. Its primary function is to inspect a given configuration object (`element` of type `formElement`) and render the appropriate UI component (Input, Select, Datepicker, Button, etc.) while managing its state (`model` and `setModel`). This central component simplifies the creation of complex, data-driven forms.
-
-## 📦 Installation / Import
-
-```javascript
-import BAComponentSwitcher from "@site/src/components/BAComponentSwitcher";
-// Ensure all necessary UI component dependencies are also available in context.
-```
-
-## 🧠 Core Logic
+##  Core Logic
 
 The component uses a standard JavaScript switch statement on the `element.elementType` prop to determine which underlying UI component to render. It acts as a middleware, handling prop mapping, change event propagation, and complex logic (like lookups) before passing control to the specific component.
 
@@ -40,7 +29,7 @@ This component is driven entirely by the `formElement` type, which dictates the 
 | `text` | `<BAPera />` (in `<BABox />`) | Renders static, bound text (label and model value). |
 | `custombody` | `<BABox />` | Renders arbitrary JSX content supplied via the `body` prop. |
 
-## ⚙️ Component Props
+## ️ Component Props
 
 | Prop | Type | Description |
 | :--- | :--- | :--- |
@@ -52,7 +41,7 @@ This component is driven entirely by the `formElement` type, which dictates the 
 | `rowIndex` | number | Index of the current row (relevant for list/grid contexts). |
 | `apiFunctions` | string | String to identify a set of API functions (used primarily by `<BASearchLookup />`). |
 
-## 🔗 Key Utility Functions (Logic Overview)
+##  Key Utility Functions (Logic Overview)
 
 The component includes several functions to manage complex state mutations, especially for lookup fields:
 
@@ -61,7 +50,7 @@ The component includes several functions to manage complex state mutations, espe
 *   **handleMultiSelect**: **Multi-Select Processing**. Takes selected rows from a multi-select lookup, applies field remapping (`fieldAlias`), filters required fields (`reqFields`), and updates an array key (`arrKey`) in the main model state.
 *   **uploadFile**: Simple utility to set the value of a file input field in the model state.
 
-## 🧩 Dependencies
+##  Dependencies
 
 This component imports and utilizes the following external and internal UI components:
 `<BAButton />` `<BAInput />` `<BASearchLookup />` `<BASelect />` `<BASwitch />` `<BADate />` `<BABox />` `<BAPera />` `<BAFieldset />` `<BADragDropFile />` `<BATextarea />` `<BAImagePicker />` `<BACheckbox />` `<BARadio />`

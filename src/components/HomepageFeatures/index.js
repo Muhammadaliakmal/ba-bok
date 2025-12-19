@@ -1,53 +1,69 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { motion } from 'framer-motion';
+import { ReadOutlined, ThunderboltOutlined, CoffeeOutlined, SafetyCertificateOutlined, CodeOutlined, CloudServerOutlined } from '@ant-design/icons';
 
 const FeatureList = [
   {
     title: 'Clean & Modern',
-    description: (
-      <>
-        A beautiful, transparent blue interface designed with glassmorphism
-        effects for a premium reading experience.
-      </>
-    ),
+    icon: <ThunderboltOutlined />,
+    description: 'Glassmorphism aesthetic with deeply refined transparency effects.',
+    className: styles.cardLarge, // Bento span 2
   },
   {
     title: 'Easy Navigation',
-    description: (
-      <>
-        Intuitive structure that helps you find what you need quickly
-        and efficiently.
-      </>
-    ),
+    icon: <ReadOutlined />,
+    description: 'Intuitive structure that helps you find what you need quickly.',
+    className: styles.cardNormal,
   },
   {
-    title: 'Ready to Explore',
-    description: (
-      <>
-        Start your journey through the content with a clean,
-        distraction-free interface.
-      </>
-    ),
+    title: 'Code Ready',
+    icon: <CodeOutlined />,
+    description: 'Copy-paste ready components for your next project.',
+    className: styles.cardNormal,
+  },
+  {
+    title: 'Secure & Safe',
+    icon: <SafetyCertificateOutlined />,
+    description: 'Built with TypeScript and best security practices in mind.',
+    className: styles.cardNormal,
+  },
+  {
+    title: 'Blazing Fast',
+    icon: <CoffeeOutlined />,
+    description: 'Optimized for performance with zero runtime overhead options.',
+    className: styles.cardLarge, // Bento span 2
+  },
+  {
+    title: 'Cloud Native',
+    icon: <CloudServerOutlined />,
+    description: 'Ready for deployment on Vercel, Netlify, or Docker.',
+    className: styles.cardNormal,
   },
 ];
 
-function Feature({ title, description }) {
+function Feature({ title, description, icon, className }) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <motion.div
+      className={clsx(styles.bentoCard, className)}
+      whileHover={{ scale: 1.02, y: -5 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <div className={styles.cardHeader}>
+        <div className={styles.iconWrapper}>{icon}</div>
+        <Heading as="h3" className={styles.cardTitle}>{title}</Heading>
       </div>
-    </div>
+      <p className={styles.cardDescription}>{description}</p>
+    </motion.div>
   );
 }
 
 export default function HomepageFeatures() {
   return (
-    <section className={clsx(styles.features, 'features-section')}>
+    <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className={styles.bentoGrid}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

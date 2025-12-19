@@ -4,22 +4,12 @@ sidebar_position: 25
 
 # BASwitch Component
 
-## Description
-
-The `BASwitch` component is a reusable wrapper around the Ant Design `Switch` component. It standardizes the presentation by including a label (using Ant Design's `Typography.Title`) and nesting the control within a custom `BABox` container for consistent styling and layout. It is designed to handle boolean states and pass changes up via the `onChange` handler.
-
-## 📦 Installation / Import
-
-```javascript
-import BASwitch from "@site/src/components/BASwitch";
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **Internal Components**: `<BABox />`.
 *   **External Libraries**: `Switch`, `Typography` (Ant Design).
 
-## 🛠️ Usage
+## ️ Usage
 
 This example demonstrates importing `BASwitch` and using it within a React component to manage a state variable.
 
@@ -60,7 +50,7 @@ function MyForm() {
 export default MyForm;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 | Prop | Type | Required | Description |
 | :--- | :--- | :--- | :--- |

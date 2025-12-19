@@ -1,23 +1,180 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+.basuiteHero {
+  padding: 8rem 0 6rem;
+  background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.basuiteTitle {
+  font-family: 'Playfair Display', serif; /* Or system serif if not loaded */
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: left;
+}
+
+.basuiteSubtitle {
+  font-size: 1.5rem;
+  color: var(--ifm-color-content-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  text-align: left;
+  font-weight: 300;
+}
+
+.omnibarWrapper {
+  margin-bottom: 3rem;
+  max-width: 500px;
+}
+
+.omnibar {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
+}
+
+.omnibar:focus-within {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2), var(--glass-shadow);
+  transform: translateY(-2px);
+}
+
+.searchIcon {
+  font-size: 1.5rem;
+  color: var(--ifm-color-content-secondary);
+  margin-right: 1rem;
+}
+
+.omnibarInput {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--ifm-color-content);
+  flex: 1;
+  outline: none;
+}
+
+.shortcutHint {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--ifm-color-content-secondary);
+  border: 1px solid var(--glass-border);
 }
 
 .buttons {
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.heroVisual {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.glassCard {
+  background: rgba(30, 41, 59, 0.7); /* Slate 800 with opacity */
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 500px;
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+}
+
+.codeSnippet pre {
+  margin: 0;
+  background: transparent;
+}
+
+.codeSnippet code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+}
+
+.componentOutput {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.outputLabel {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.outputWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.4); /* Slate 900 background */
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.mockBAButton {
+  background-color: #38bdf8; /* Sky 400 */
+  color: #0f172a; /* Slate 900 */
+  border: none;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.mockBAButton:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 996px) {
+  .basuiteHero {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  
+  .basuiteTitle {
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  .basuiteSubtitle {
+    text-align: center;
+    margin: 0 auto 2rem;
+  }
+  
+  .omnibarWrapper {
+    margin: 0 auto 2rem;
+  }
+  
+  .buttons {
+    justify-content: center;
+  }
+  
+  .heroVisual {
+    margin-top: 4rem;
+  }
 }

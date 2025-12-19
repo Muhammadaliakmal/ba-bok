@@ -4,22 +4,12 @@ sidebar_position: 14
 
 # BAImagePicker Component
 
-## Description
-
-The `BAImagePicker` is a highly specialized file input wrapper designed for selecting a **single image**. It provides instant client-side preview of the selected image and returns the raw `File` object(s) to the parent component via the `onChange` handler, ready for form submission or server upload. It also supports displaying an initial image using a remote URL (`value`).
-
-## 📦 Installation / Import
-
-```javascript
-import BAImagePicker from "@site/src/components/BAImagePicker";
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **antd**: Used for theme integration (`theme.useToken`) to style the remove button.
 *   **CloseOutlined**: An Ant Design icon used for the remove button.
 
-## 🛠️ Usage
+## ️ Usage
 
 The component acts as a controlled input, receiving an initial URL via `value` (if the image is already saved) and notifying the parent via `onChange` whenever a new file is selected or the existing one is removed.
 
@@ -56,7 +46,7 @@ function ProfilePictureUploader() {
 export default ProfilePictureUploader;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
@@ -66,7 +56,7 @@ export default ProfilePictureUploader;
 | `disabled` | boolean | `false` | Disables the ability to select a new image. |
 | `uploadText` | string | `"Select Image"` | The text displayed in the picker area when no image is selected. |
 
-## 📐 Key Logic and Output
+##  Key Logic and Output
 
 ### Single File Constraint
 The underlying file input is hardcoded with `multiple={false}`, ensuring only one image can ever be selected at a time.

@@ -4,24 +4,14 @@ sidebar_position: 22
 
 # BASearchLookup Component
 
-## Description
-
-The `BASearchLookup` component is a complex form field designed for selecting data records from a remote API source. It presents itself either as a search-enabled input field or a button, and upon activation, opens a modal containing a searchable, sortable grid (`BAGrid`) with pagination (`BAPagination`) to allow the user to select one or more records.
-
-## 📦 Installation / Import
-
-```javascript
-import BASearchLookup from "@site/src/components/BASearchLookup";
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **Internal Components**: `<BAModal />`, `<BAGrid />`, `<BAPagination />`, `<BAButton />`, `<BABox />`.
 *   **Internal Utility**: `createApiFunction` (used for API interaction setup).
 *   **External Components**: `Input`, `message`, `Typography`, `Grid` (Ant Design).
 *   **External Icons**: `SearchOutlined`, `CloseOutlined` (Ant Design Icons).
 
-## 🛠️ Usage
+## ️ Usage
 
 The component requires the `controller` (API endpoint path) and `apiFunctions` (API wrapper) to fetch the data. The `config` prop defines the columns of the lookup grid.
 
@@ -77,7 +67,7 @@ function ProductSelectionForm() {
 export default ProductSelectionForm;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 ### Core Input
 
@@ -121,7 +111,7 @@ export default ProductSelectionForm;
 
 `apiName`, `multiple`, `isRowSelected`, `isAllSelected`, `data`, `useLookup`, `params`. (Props defined but not actively used or processed in the primary component logic).
 
-## 🔄 Core Interaction Flow
+##  Core Interaction Flow
 
 ### 1. Input Field Mode (Default)
 *   **Search/Open**: Clicking the `SearchOutlined` suffix icon, or pressing the **Enter** key while the input is focused, triggers the lookup modal.
@@ -130,14 +120,14 @@ export default ProductSelectionForm;
 ### 2. Button Mode (`type="button"`)
 *   Renders a standard `<BAButton />` which, when clicked, immediately opens the modal.
 
-## 💾 Data Fetching (`getData`)
+##  Data Fetching (`getData`)
 
 The `getData` function is responsible for fetching data for the lookup grid.
 1.  It constructs the API endpoint using a base URL (`lookup/`) and the `controller` prop.
 2.  It utilizes the `config` prop to dynamically build the `selector` query parameter, optimizing the request to only fetch columns needed for the grid display.
 3.  It handles pagination by merging the current `pageConfig` state with any new page/size parameters passed to it.
 
-## ✅ Output & Selection
+##  Output & Selection
 
 ### Single Selection (Default)
 1.  When a row is clicked, the `onRowClick` handler is executed.

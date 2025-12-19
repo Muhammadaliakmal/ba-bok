@@ -4,21 +4,11 @@ sidebar_position: 27
 
 # BATextarea Component
 
-## Description
-
-The `BATextarea` component is a client-side wrapper around the Ant Design `Input.TextArea` component. It provides a standardized interface for multi-line text input fields, including a mandatory label, optional placeholder text, and state management capabilities. It utilizes Ant Design's `Typography.Title` for consistent label styling.
-
-## 📦 Installation / Import
-
-```javascript
-import BATextarea from "@site/src/components/BATextarea";
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **External Libraries**: `Input`, `Typography` (Ant Design).
 
-## 🛠️ Usage
+## ️ Usage
 
 This example demonstrates how to use `BATextarea` to capture user feedback, managing the input state with `useState`.
 
@@ -71,7 +61,7 @@ function FeedbackForm() {
 export default FeedbackForm;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 | Prop | Type | Required | Description |
 | :--- | :--- | :--- | :--- |

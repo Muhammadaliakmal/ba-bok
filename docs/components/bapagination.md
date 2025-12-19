@@ -4,22 +4,12 @@ sidebar_position: 18
 
 # BAPagination Component
 
-## Description
-
-The `BAPagination` component provides a stylized, self-contained footer for handling pagination controls, typically used below a data table or grid. It wraps the Ant Design `<Pagination>` component and centralizes the logic for managing the current page and page size, communicating changes back to the parent component for data fetching.
-
-## 📦 Installation / Import
-
-```javascript
-import BAPagination from "@site/src/components/BAPagination";
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **Internal Components**: `<BABox />` (Used for container layout and styling).
 *   **External Libraries**: `Pagination` (Ant Design).
 
-## 🛠️ Usage
+## ️ Usage
 
 This component is controlled and requires the total number of records and a handler function (`onPageChange`) to manage data fetching in the parent component.
 
@@ -55,7 +45,7 @@ function DataContainer() {
 export default DataContainer;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
@@ -66,7 +56,7 @@ export default DataContainer;
 | `multiSelect` | boolean | `false` | Optional, unused in current implementation. |
 | `content` | `React.ReactNode` | `undefined` | Optional, unused in current implementation. |
 
-## 🔄 Key Logic and State
+##  Key Logic and State
 
 ### Internal State Management
 The component manages the current pagination state internally using `pageConfig` (current page and pageSize). This state ensures the Ant Design `<Pagination>` component remains in sync with user interactions.

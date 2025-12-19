@@ -4,22 +4,12 @@ sidebar_position: 23
 
 # BASelect Component
 
-## Description
-
-The `BASelect` component is a flexible, controlled wrapper for the Ant Design `<Select />` component. It standardizes common features required for form inputs, including mandatory state management (`value`, `onChange`), dedicated labeling with a required indicator, and options for single or multiple selection.
-
-## 📦 Installation / Import
-
-```javascript
-import BASelect from "@site/src/components/BASelect";
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **Internal Components**: `<BABox />` (Used for container layout).
 *   **External Libraries**: `Select`, `Typography` (Ant Design).
 
-## 🛠️ Usage
+## ️ Usage
 
 The component is controlled and requires a `value`, `options`, and an `onChange` handler to function correctly.
 
@@ -60,7 +50,7 @@ function SelectForm() {
 export default SelectForm;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 ### Required/Core
 
@@ -87,7 +77,7 @@ export default SelectForm;
 
 `api`, `apiParams`, `valueField`, `displayField`. (These props are defined in the type but are not currently implemented or used within the component's internal logic).
 
-## 🏗️ options Array Structure
+## ️ options Array Structure
 
 Each object within the `options` array must adhere to the Ant Design standard structure:
 
@@ -97,7 +87,7 @@ Each object within the `options` array must adhere to the Ant Design standard st
 | `label` | string | The text displayed to the user in the dropdown list. |
 | `disabled` | boolean | Optional. If true, the user cannot select this option. |
 
-## ⭐ Key Features
+##  Key Features
 
 *   **Multiple Mode**: By setting `multiple={true}`, the component utilizes `mode="multiple"` internally, allowing the user to select several options, and ensuring the `value` and `onChange` handle an array of values.
 *   **Integrated Labeling**: The component uses Ant Design's `Typography.Title` (level 5) to consistently render the label. The `required` prop automatically appends a styled asterisk to enforce form consistency.

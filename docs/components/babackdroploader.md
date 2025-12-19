@@ -4,19 +4,7 @@ sidebar_position: 4
 
 # BABackdropLoader Component
 
-## Description
-
-The `BABackdropLoader` component provides a **full-screen, modal-like overlay** used to block user interaction and indicate a global loading state for an application or a page. It renders a centered loader (`<BALoader />`) over a semi-transparent white background, ensuring a clear visual cue to the user.
-
-## 📦 Installation / Import
-
-Ensure the component file is accessible, and import it as follows:
-
-```javascript
-import BABackdropLoader from '@site/src/components/BABackdropLoader';
-```
-
-## 🛠️ Usage
+## ️ Usage
 
 The component is controlled by a single prop: `loading`. When `loading` is `true` (the default), the backdrop is visible. When `loading` is `false`, the component returns `null` and is hidden from the DOM.
 
@@ -52,20 +40,20 @@ function MyPage() {
 export default MyPage;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
 | `loading` | boolean | `true` | Controls the visibility of the backdrop and loader. Set to `false` to hide the component. |
 
-## 🔗 Dependencies
+##  Dependencies
 
 This component relies on two internal components, which must be imported from their respective paths (`./BABox` and `./BALoader`):
 
 * **BABox**: Used as the container for the full-screen backdrop.
 * **BALoader**: The actual loading indicator displayed at the center of the backdrop.
 
-## 🎨 Styling & Structure
+##  Styling & Structure
 
 The backdrop effect is achieved through specific CSS properties applied to the wrapping `<BABox>` component:
 

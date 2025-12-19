@@ -4,21 +4,11 @@ sidebar_position: 10
 
 # BAFieldset Component
 
-## Description
-
-The `BAFieldset` component is a dedicated wrapper for **grouping related form elements or content**. It utilizes the semantic HTML `<fieldset>` and `<legend>` elements, enhancing both visual organization and accessibility. It integrates with Ant Design's theming system to use the defined primary color for the title header.
-
-## 📦 Installation / Import
-
-```javascript
-import BAFieldset from "@site/src/components/BAFieldset";
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **antd**: Specifically, `theme.useToken` is imported to access the application's current theme variables, particularly the primary color (`colorPrimary`), for dynamic styling of the legend.
 
-## 🛠️ Usage
+## ️ Usage
 
 The component requires a simple string for the `title` and any valid React node (like form components or text) for the `body`.
 
@@ -47,14 +37,14 @@ function UserDetailForm() {
 export default UserDetailForm;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 | Prop | Type | Description |
 | :--- | :--- | :--- |
 | `title` | string | **Required**. The text displayed in the colored header (`<legend>`) that names the grouped content. |
 | `body` | `React.ReactNode` | **Required**. The content (e.g., form inputs, tables, custom elements) to be rendered inside the `<fieldset>`. |
 
-## 🎨 Styling & Structure
+##  Styling & Structure
 
 The component provides clear visual grouping:
 

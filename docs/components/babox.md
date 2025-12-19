@@ -6,12 +6,6 @@ sidebar_position: 3
 
 A simple wrapper component for layout and styling, similar to a div but with extended props.
 
-## Installation
-
-```bash
-npm install basuite
-```
-
 ## Usage
 
 ```jsx

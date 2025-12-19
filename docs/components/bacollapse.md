@@ -4,22 +4,7 @@ sidebar_position: 5
 
 # BACollapse Component
 
-## Description
-
-The `BACollapse` component creates a simple, vertical collapsible panel. It allows users to toggle the visibility of a content area using a clickable header, saving screen space and organizing complex information.
-
-## 📦 Installation / Import
-
-Ensure the component file is accessible, and import it along with its required dependencies:
-
-```javascript
-import BACollapse from '@site/src/components/BACollapse';
-// Assuming these are also imported or available in your environment
-// import BABox from "../src/components/BA/BABox";
-// import BAPera from "../src/components/BA/BAPera";
-```
-
-## 🛠️ Usage
+## ️ Usage
 
 The component accepts a label for the clickable header and the content to be collapsed/expanded as children.
 
@@ -54,7 +39,7 @@ function MyCollapsibleContainer() {
 export default MyCollapsibleContainer;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
@@ -64,7 +49,7 @@ export default MyCollapsibleContainer;
 | `expand` | boolean | `undefined` | If set to `true`, the panel will be open by default upon initial render. |
 | `labelClick` | function | `undefined` | An optional callback function executed when the header label is clicked, in addition to the component's internal toggle logic. |
 
-## 🔗 Dependencies
+##  Dependencies
 
 This component relies on several external components and libraries:
 
@@ -72,7 +57,7 @@ This component relies on several external components and libraries:
 *   **BAPera**: Used to create the clickable header element that displays the label.
 *   **@ant-design/icons**: Provides the visual indicators for the expanded (`<DownOutlined />`) and collapsed (`<RightOutlined />`) states.
 
-## 🎨 Styling & Structure
+##  Styling & Structure
 
 The component's structure consists of a main wrapper (`<BABox>`) containing the header and the content area:
 

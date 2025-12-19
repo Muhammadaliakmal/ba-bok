@@ -4,28 +4,14 @@ sidebar_position: 24
 
 # BASetupGrid Component
 
-## Description
-
-The `BASetupGrid` component is a high-level, feature-rich data grid designed primarily for **master configuration and CRUD (Create, Read, Update, Delete) screens**. It handles remote data fetching, pagination, sorting (API dependent), inline filtering, row actions (Edit/Delete), and Excel export. It is mobile-responsive, switching between a full table view and a horizontal-scrolling card view.
-
-The component utilizes `forwardRef` and `useImperativeHandle` to allow parent components to trigger a data refresh.
-
-## 📦 Installation / Import
-
-```javascript
-import BASetupGrid from "@site/src/components/BASetupGrid";
-// Requires peer dependencies
-// import * as XLSX from "xlsx";
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **Internal Components**: `<BABox />`, `<BAButton />`, `<BAPagination />`, `<BAModal />`, `<BALoader />`, `<BAInput />`, `<BASelect />`, `<BABackdropLoader />`, `<BADate />`, `<BAPera />`, `<BAScreenHeader />`, `<BAIconButton />`.
 *   **Internal Utilities**: `formattedDate`, `formattedNumber`, `createApiFunction`.
 *   **External Libraries**: `Grid`, `message`, `Popconfirm`, `theme` (Ant Design), `XLSX` (SheetJS).
 *   **External Icons**: `DeleteOutlined`, `EditOutlined`, `PlusOutlined`, `CloseOutlined`, `CheckOutlined`, `FileExcelOutlined`, `PrinterOutlined`.
 
-## 🛠️ Usage
+## ️ Usage
 
 This component requires API methods (`Get`, `Delete`) and a configuration structure (`cols`) to define the displayed data.
 
@@ -77,7 +63,7 @@ function UsersGrid() {
 export default UsersGrid;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 ### Required/Core
 
@@ -128,7 +114,7 @@ export default UsersGrid;
 
 `apiName`, `exportUrl`, `onView`, `sortColumn`, `sortDirection`, `formElement`, `disablePost`, `disableView`, `exportParams`, `getDataTrigger`, `rec_id`, `getByRequest`, `modelAlias`, `fieldsToDelete`, `convertToNumber`, `disableCompId`, `reqFields`, `isUpdateReq`. (Props defined in the type but not actively used in the component logic).
 
-## 🖼️ cols Configuration (Column Definition)
+## ️ cols Configuration (Column Definition)
 
 The `cols` array is the primary driver for table rendering and filtering.
 
@@ -143,7 +129,7 @@ The `cols` array is the primary driver for table rendering and filtering.
 | `hideFilter` | boolean | Only for type: `'date'`. Hides the date picker filter for the column. |
 | `HeaderField` | `() => React.ReactNode` | Custom content to render inside the header cell (not used for standard filtering). |
 
-## 🚀 Key Features & API Interaction
+##  Key Features & API Interaction
 
 ### Data Fetching and Refresh
 The core data retrieval is handled by the `getData` function, which is called on initial load, on filter changes, and on pagination changes.

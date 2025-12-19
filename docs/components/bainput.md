@@ -6,12 +6,6 @@ sidebar_position: 2
 
 A versatile input component supporting text, password, numeric, masked, and OTP formats with built-in validation options.
 
-## Installation
-
-```bash
-npm install basuite
-```
-
 ## Usage
 
 ```jsx

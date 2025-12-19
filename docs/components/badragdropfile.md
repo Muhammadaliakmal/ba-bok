@@ -4,22 +4,11 @@ sidebar_position: 8
 
 # BADragDropFile Component
 
-## Description
-
-The `BADragDropFile` component provides a versatile, drag-and-drop interface for uploading files, built upon the Ant Design `Upload.Dragger`. Crucially, this component is designed for **client-side file handling**, meaning it captures files (as standard JavaScript `File` objects/Blobs) and passes them to a parent handler via `onFileUpload`, rather than performing an immediate server upload. It supports previewing and managing the uploaded file list. 
-
-## 📦 Installation / Import
-
-```javascript
-import BADragDropFile from "@site/src/components/BADragDropFile";
-// Note: This component requires Ant Design and its dependencies to be installed.
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **antd**: Provides the core UI components: `Upload` (specifically `Dragger`), `message`, `Image`, and `InboxOutlined` from `@ant-design/icons`.
 
-## 🛠️ Usage
+## ️ Usage
 
 The primary interaction is through the `onFileUpload` prop, which receives the list of client-side file objects.
 
@@ -55,7 +44,7 @@ function DocumentUploader() {
 export default DocumentUploader;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 The component extends standard Ant Design `UploadProps` and adds specific handling props:
 
@@ -68,7 +57,7 @@ The component extends standard Ant Design `UploadProps` and adds specific handli
 | `uploadText` | string | `"Click or drag file to this area to upload"` | The main text displayed in the drag-and-drop area. |
 | `action` | string | `undefined` | The target URL for upload. **NOTE**: The default server upload is prevented; this prop is mostly unused. |
 
-## 🔑 Key Logic & Constraints
+##  Key Logic & Constraints
 
 ### File Handling
 

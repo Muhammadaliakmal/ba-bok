@@ -4,23 +4,13 @@ sidebar_position: 21
 
 # BAScreenHeader Component
 
-## Description
-
-The `BAScreenHeader` component provides a standardized and responsive top bar for application screens. It combines essential features like navigation control, a primary screen title, and a flexible right-hand section for custom action buttons or menu options.
-
-## 📦 Installation / Import
-
-```javascript
-import BAScreenHeader from "@site/src/components/BAScreenHeader";
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **Internal Components**: `<BABox />`, `<BAIconButton />`, `<BAPera />`.
 *   **Internal Helper**: `goBack` (Assumed to use history or router for navigation).
 *   **External Icons**: `ArrowLeftOutlined` (Ant Design Icon).
 
-## 🛠️ Usage
+## ️ Usage
 
 The component primarily requires a `title`. Custom action buttons are passed via the `headerOptions` array, which allows for rendering any custom JSX/Components (like other `<BAIconButton />` or `<BAButton />`).
 
@@ -59,7 +49,7 @@ function UserProfileScreen() {
 export default UserProfileScreen;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 | Prop | Type | Description |
 | :--- | :--- | :--- |
@@ -75,7 +65,7 @@ export default UserProfileScreen;
 | `authorInfo` | object | Optional, currently unused props related to displaying metadata. |
 | `showAuthorInfo` | boolean | Optional, currently unused props related to displaying metadata. |
 
-## 🏗️ headerOptions Array Structure
+## ️ headerOptions Array Structure
 
 The `headerOptions` array allows fine-grained control over the action buttons displayed in the header. Each object must contain:
 
@@ -84,7 +74,7 @@ The `headerOptions` array allows fine-grained control over the action buttons di
 | `displayField` | `() => React.ReactNode` | **Required**. A function that returns the component (e.g., `<BAIconButton />`) to be rendered as an action item. |
 | `isHide` | boolean | If true, this specific option will be excluded from rendering in the header. |
 
-## ⭐ Key Features
+##  Key Features
 
 *   **Default Back Navigation**: By default, a circular back button is displayed on the left. Clicking it executes the imported `goBack()` helper function (typically navigating to the previous history state).
 *   **Custom Disabling**: The `disableBack` prop allows the back button to be easily hidden for screens where navigation backward is not appropriate (e.g., a landing page).

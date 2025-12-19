@@ -6,12 +6,6 @@ sidebar_position: 7
 
 A dynamic form builder that renders various input types based on a configurable schema. Supports validation, masking, custom body content, loading states, disabled mode, save button alignment, and full two-way model binding.
 
-## Installation
-
-```bash
-npm install basuite
-```
-
 ## Usage
 
 ```jsx

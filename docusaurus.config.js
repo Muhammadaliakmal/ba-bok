@@ -10,7 +10,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'BASU/T',
+  title: 'BASUIT',
   tagline: 'Let\'s Get Started',
   favicon: 'img/logo.png',
 
@@ -86,8 +86,9 @@ const config = {
       },
       navbar: {
         logo: {
-          alt: 'BASU/T Logo',
+          alt: 'BASUIT Logo',
           src: 'img/logo.png',
+          srcDark: 'img/logo.png',
         },
         items: [
           {
@@ -95,6 +96,12 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Book',
+          },
+          {
+            href: 'https://github.com/BasitAyaz?tab=repositories',
+            position: 'right',
+            className: 'header-profile-link',
+            'aria-label': 'GitHub Profile',
           },
         ],
       },

@@ -1,11 +1,99 @@
 .features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+  padding: 4rem 0 8rem;
+  position: relative;
+  z-index: 1;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  grid-auto-rows: minmax(180px, auto);
+}
+
+.bentoCard {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.bentoCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bentoCard:hover {
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), var(--glass-shadow);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.bentoCard:hover::before {
+  opacity: 1;
+}
+
+.cardLarge {
+  grid-column: span 2;
+}
+
+.cardNormal {
+  grid-column: span 1;
+}
+
+.iconWrapper {
+  font-size: 2rem;
+  color: var(--color-accent-secondary); /* Amber from BASUITE Theme */
+  margin-bottom: 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-content);
+  font-weight: 600;
+}
+
+.cardDescription {
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 996px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cardLarge {
+    grid-column: span 1;
+  }
 }

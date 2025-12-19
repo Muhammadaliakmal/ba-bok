@@ -4,21 +4,11 @@ sidebar_position: 13
 
 # BAIconButton Component
 
-## Description
-
-The `BAIconButton` is a lightweight wrapper around the Ant Design `<Button>` component, specialized for creating clean, circular action buttons that display only an icon. It simplifies usage by setting sensible defaults for appearance and exposes all standard Ant Design button functionality (loading, disabled, type).
-
-## 📦 Installation / Import
-
-```javascript
-import BAIconButton from "@site/src/components/BAIconButton";
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **antd**: Provides the core UI component, `<Button />`.
 
-## 🛠️ Usage
+## ️ Usage
 
 The component requires the `icon` prop to be a valid React Node (typically an Ant Design Icon component).
 
@@ -49,7 +39,7 @@ function ActionToolbar() {
 export default ActionToolbar;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 Most props are passed directly to the underlying Ant Design `<Button>` component.
 
@@ -64,7 +54,7 @@ Most props are passed directly to the underlying Ant Design `<Button>` component
 | `danger` | boolean | `false` | Sets the button style to an alert/danger theme (typically red). |
 | `className` | string | `undefined` | Custom CSS classes for styling. |
 
-## 🎨 Default Configuration
+##  Default Configuration
 
 The component sets two key defaults to ensure a consistent, minimal icon button style out-of-the-box:
 

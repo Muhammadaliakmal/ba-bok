@@ -4,23 +4,12 @@ sidebar_position: 12
 
 # BAGrid Component
 
-## Description
-
-The `BAGrid` component is a flexible, read-only data grid designed for displaying large datasets in a standardized, performant table format. It handles various states (loading, no data) and provides extensive customization for column rendering, dynamic styling, and row interactivity. The grid is optimized for full-page views, featuring a fixed height and scrollable content area.
-
-## 📦 Installation / Import
-
-```javascript
-import BAGrid from "@site/src/components/BAGrid";
-// Requires internal components like BABox, BALoader, BAPera.
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **Internal Components**: `<BABox />`, `<BALoader />`, `<BAPera />`.
 *   **External Libraries**: `antd`'s `theme.useToken` for styling.
 
-## 🛠️ Usage
+## ️ Usage
 
 The component primarily requires a data source array and a column definition array.
 
@@ -63,7 +52,7 @@ function CustomerList() {
 export default CustomerList;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 | Prop | Type | Description |
 | :--- | :--- | :--- |
@@ -77,7 +66,7 @@ export default CustomerList;
 | `allowMultiple` | boolean | Optional, currently unused but suggests future selection functionality. |
 | `allowSearch`, `colSearchObj`, `handleSearch` | boolean / object / function | Optional, indicates support for search functionality (not fully implemented in current code block). |
 
-## 🏗️ Column (cols) Definition Structure
+## ️ Column (cols) Definition Structure
 
 The `cols` prop is an array of objects that defines the column headers and how data is rendered within each cell.
 
@@ -89,7 +78,7 @@ The `cols` prop is an array of objects that defines the column headers and how d
 | `HeaderField` | any | Renders additional content in the cell after the main content (potentially for things like sort/filter indicators). |
 | `className` | string | Custom CSS classes for the cell content. |
 
-## ✨ Key Features & Styling
+##  Key Features & Styling
 
 ### Theming and Structure
 *   **Header Styling**: The table header background color dynamically uses the application's **Ant Design Primary Color** (`token.token.colorPrimary`), with white text, ensuring visual consistency with the theme.

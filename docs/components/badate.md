@@ -4,18 +4,7 @@ sidebar_position: 7
 
 # BADate Component
 
-## Description
-
-The `BADate` component is a wrapper around the Ant Design `DatePicker`. It standardizes date handling by using `dayjs` for input/output formatting and ensures that the value returned to the parent component's `onChange` handler is consistently a standard **JavaScript `Date` object** (or `null`), making it easier to integrate into forms.
-
-## 📦 Installation / Import
-
-```javascript
-import BADate from "@site/src/components/BADate";
-// Ensure Ant Design and dayjs are installed and configured in your project.
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 This component relies on external UI and utility libraries:
 
@@ -23,7 +12,7 @@ This component relies on external UI and utility libraries:
 *   **dayjs**: Used for parsing and formatting date values.
 *   **BABox**: An internal wrapper component for layout/styling.
 
-## 🛠️ Usage
+## ️ Usage
 
 The component is controlled and receives data via the `value` and `onChange` props, similar to standard form inputs.
 
@@ -58,7 +47,7 @@ function DateForm() {
 export default DateForm;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
@@ -73,7 +62,7 @@ export default DateForm;
 | `maxDate` | any | `undefined` | Defines the maximum selectable date (accepts dayjs object). |
 | `validate` | boolean | `false` | Currently unused in the component logic. |
 
-## 📐 Date Handling and Format
+##  Date Handling and Format
 
 The component implements specialized logic within the `validatePeriod` function to manage date formats:
 

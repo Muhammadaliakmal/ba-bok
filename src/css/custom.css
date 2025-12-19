@@ -1,5 +1,5 @@
 /**
- * Custom CSS for BASu/te Book
+ * Custom CSS for BASuite Book
  * Transparent blue theme with glassmorphism effects
  */
 
@@ -93,6 +93,39 @@ html[data-theme='light'] .button--primary {
   border: 1px solid #000000 !important; /* Visible border */
 }
 
+/* Light Theme Logo - Scale Method (Huge) - HOMEPAGE ONLY */
+body:has(.homepage-wrapper) html[data-theme='light'] .navbar__logo,
+html[data-theme='light'] body:has(.homepage-wrapper) .navbar__logo {
+  height: 100px !important; 
+  width: auto;
+  transform: scale(4.5);
+  transform-origin: center;
+  z-index: 1000;
+  position: relative;
+  margin: 0 40px;
+}
+
+/* Dark Theme Logo - Scale Method (Huge) - HOMEPAGE ONLY */
+body:has(.homepage-wrapper) html[data-theme='dark'] .navbar__logo,
+html[data-theme='dark'] body:has(.homepage-wrapper) .navbar__logo {
+  height: 100px !important;
+  width: auto;
+  transform: scale(4.5);
+  transform-origin: center;
+  z-index: 1000;
+  position: relative;
+  margin: 0 40px;
+}
+
+/* Default Logo Style (Book/Docs Pages) - RESTORE SIMPLE HEADER */
+.navbar__logo {
+  height: 60px !important; /* Standard size */
+  width: auto;
+  transform: none !important;
+  margin: 0 !important;
+  transition: transform 0.3s ease; /* Smooth transition if navigating */
+}
+
 :root {
   /* Fallback / Common variables */
   --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -107,39 +140,66 @@ html[data-theme='light'] .button--primary {
 /* Dark mode colors - Deep Blue Transparent Theme */
 /* Dark mode colors - Black / Blue / Transparent Theme */
 [data-theme='dark'] {
-  /* Vibrant Blue Primary Colors */
-  --ifm-color-primary: #3b82f6; /* Blue 500 */
-  --ifm-color-primary-dark: #2563eb;
-  --ifm-color-primary-darker: #1d4ed8;
-  --ifm-color-primary-darkest: #1e40af;
-  --ifm-color-primary-light: #60a5fa;
-  --ifm-color-primary-lighter: #93c5fd;
-  --ifm-color-primary-lightest: #bfdbfe;
+  /* BASUITE THEME PALETTE */
+  /* Primary BG: Slate 900 - Deep Navy */
+  --ifm-color-primary: #38bdf8; /* Sky 400 */
+  --ifm-color-primary-dark: #0ea5e9;
+  --ifm-color-primary-darker: #0284c7;
+  --ifm-color-primary-darkest: #0c4a6e;
+  --ifm-color-primary-light: #7dd3fc;
+  --ifm-color-primary-lighter: #bae6fd;
+  --ifm-color-primary-lightest: #e0f2fe;
 
-  /* Backgrounds: Rich Blue instead of Black */
-  --ifm-background-color: #172554; /* Rich Blue */
-  --ifm-navbar-background-color: rgba(23, 37, 84, 0.9);
+  --ifm-background-color: #0f172a; /* Slate 900 */
+  --ifm-navbar-background-color: rgba(15, 23, 42, 0.85);
   
-  /* Glassmorphism Variables - Dark Mode */
-  --glass-bg: rgba(30, 58, 138, 0.7); /* Lighter Blue Glass */
-  --glass-border: rgba(96, 165, 250, 0.3); /* Lighter Blue Border */
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  /* Glassmorphism Variables - Lumina Style */
+  --glass-bg: rgba(255, 255, 255, 0.05); /* Very subtle surface */
+  --glass-border: rgba(255, 255, 255, 0.1); 
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   
-  --docusaurus-highlighted-code-line-bg: rgba(59, 130, 246, 0.15);
+  --docusaurus-highlighted-code-line-bg: rgba(56, 189, 248, 0.1);
 
-  /* Content Text Color - Dark Mode (White) */
+  /* Content Text Color */
   --ifm-color-content: #f8fafc; /* Slate 50 */
+  --ifm-color-content-secondary: #94a3b8; /* Slate 400 */
   
-  /* Standard Docusaurus Base Colors - Dark Mode */
+  /* Standard Docusaurus Base Colors */
   --ifm-font-color-base: #f8fafc;
   --ifm-heading-color: #f8fafc;
-  --ifm-link-color: var(--ifm-color-primary-light);
-  --ifm-link-hover-color: var(--ifm-color-primary-lighter);
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-link-hover-color: var(--ifm-color-primary-light);
 
-  /* Menu & Sidebar Colors - Dark Mode */
-  --ifm-menu-color: #f8fafc;
-  --ifm-menu-color-active: var(--ifm-color-primary-lightest); /* Light Blue for active item in Dark Mode */
-  --ifm-menu-color-background-active: rgba(255, 255, 255, 0.1);
+  /* Custom Lumina Variables */
+  --color-accent-secondary: #fbbf24; /* Amber 400 */
+}
+
+/* Floating Pill Navbar - HOMEPAGE ONLY */
+/* Using more specific selector to ensure it doesn't leak to docs */
+body:has(.homepage-wrapper) .navbar {
+  margin: 1rem auto !important;
+  width: 95% !important;
+  max-width: 1400px !important;
+  border-radius: 50px !important;
+  top: 10px !important;
+  border: 1px solid var(--glass-border) !important;
+  position: fixed !important; /* Floating effect */
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+/* Reset Navbar for Book/Docs Pages - STANDARD DOCUSAURUS HEADER */
+html[class*="docs-"] .navbar {
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  border-radius: 0 !important;
+  top: 0 !important;
+  position: sticky !important;
+  left: 0 !important;
+  transform: none !important;
+  border: none !important;
+  border-bottom: 1px solid var(--glass-border) !important;
 }
 
 /* Navbar glassmorphism */
@@ -160,16 +220,49 @@ html[data-theme='light'] .button--primary {
 
 .navbar__brand {
   background: transparent !important;
+  /* Only overflow visible on homepage for the huge logo */
+  overflow: hidden; 
+  z-index: 1001;
+}
+
+body:has(.homepage-wrapper) .navbar__brand {
+  overflow: visible !important;
 }
 
 .navbar__logo {
-  height: 200px;
+  height: 60px;
   object-fit: contain;
   background: transparent !important;
   padding: 0;
   border: none;
   box-shadow: none;
-  margin-top: -40px;
+  margin-top: 0;
+}
+
+/* Profile Link in Header (Standard Navbar) */
+.header-profile-link {
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 50% !important;
+  background-image: url('/img/profile.png');
+  background-size: cover;
+  background-position: center;
+  border: 2px solid rgba(56, 189, 248, 0.5);
+  margin-left: 15px;
+  display: inline-block;
+  padding: 0 !important;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.header-profile-link:hover {
+  transform: scale(1.1);
+  border-color: #38bdf8;
+}
+
+/* Handle Docusaurus default link styling */
+.header-profile-link::after {
+  display: none !important; /* Hide the 'external link' icon if it appears */
 }
 
 .navbar__title {
@@ -181,12 +274,12 @@ html[data-theme='light'] .button--primary {
 
 }
 
-/* Navbar items alignment */
-.navbar__items {
+/* Navbar items alignment - HOMEPAGE ONLY */
+body:has(.homepage-wrapper) .navbar__items {
   margin-top: -30px;
 }
 
-.navbar__item {
+body:has(.homepage-wrapper) .navbar__item {
   margin-top: -30px;
 }
 
@@ -217,6 +310,14 @@ html[data-theme='light'] .button--primary {
 /* Direct targeting for all color mode toggle variations - using transform */
 /* Hiding Color Mode Toggle - Enforcing Single Theme */
 /* Color Mode Toggle - SpecKit Plus Styling */
+/* Color Mode Toggle - HOMEPAGE ONLY Transform */
+body:has(.homepage-wrapper) button[class*="colorMode"],
+body:has(.homepage-wrapper) .navbar button[aria-label*="theme"],
+body:has(.homepage-wrapper) .navbar button[aria-label*="mode"] {
+  transform: translateY(-20px) !important;
+}
+
+/* Default Color Mode Toggle Positioning */
 button[class*="colorMode"],
 .navbar button[aria-label*="theme"],
 .navbar button[aria-label*="mode"] {
@@ -226,10 +327,9 @@ button[class*="colorMode"],
   background: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(10px) !important;
-  border-radius: 50px !important; /* Pill shape or circle depending on content */
+  border-radius: 50px !important; 
   padding: 5px !important;
   margin-left: 10px;
-  transform: translateY(-20px) !important; /* Moved up 4x more */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   color: var(--ifm-color-content) !important;
 }
@@ -692,4 +792,96 @@ html {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* BASUITE Branding Watermark */
+.basuite-watermark {
+  font-family: 'Playfair Display', serif;
+  font-size: 16vw;
+  font-weight: 900;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  line-height: 0.8;
+  margin-top: 2rem;
+  pointer-events: none;
+  user-select: none;
+  text-align: center;
+  width: 100%;
+  opacity: 0.4;
+}
+
+/* Newsletter Input */
+.basuite-newsletter-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--glass-border);
+  color: white;
+  padding: 0.5rem 0;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.basuite-newsletter-input:focus {
+  border-color: var(--ifm-color-primary);
+}
+
+/* Status Pulsator */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* Minimalist Footer Styles */
+.footer-minimalist {
+  background-color: #111827 !important; /* Gray 900 */
+  color: rgba(209, 213, 219, 0.6) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.footer-social-ba-btn {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.2rem;
+}
+
+.footer-social-ba-btn:hover {
+  background-color: #38bdf8 !important; /* Sky 400 */
+  color: white !important;
+  border-color: #38bdf8 !important;
+  transform: translateY(-8px) scale(1.15);
+  box-shadow: 0 15px 30px rgba(56, 189, 248, 0.4);
+}
+
+@media screen and (max-width: 576px) {
+  .footer-minimalist div[style*="justify-content: center"] {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Hide DocCard Icons (Default '📄') */
+.card__icon, 
+.card__header svg { 
+    display: none !important; 
 }

@@ -4,21 +4,11 @@ sidebar_position: 17
 
 # BAModal Component
 
-## Description
-
-The `BAModal` component is a wrapper around the powerful Ant Design `<Modal>`, offering a simplified interface for standard use cases. It centralizes control flow via dedicated props (`open`, `close`, `content`) and exposes common Ant Design customization options.
-
-## 📦 Installation / Import
-
-```javascript
-import BAModal from "@site/src/components/BAModal";
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **antd**: Provides the core UI component, `<Modal />`.
 
-## 🛠️ Usage
+## ️ Usage
 
 The modal's visibility must be controlled by state managed in the parent component. The `close` prop is typically passed the state setter function to hide the modal.
 
@@ -61,7 +51,7 @@ function ModalDemo() {
 export default ModalDemo;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 | Prop | Type | Description |
 | :--- | :--- | :--- |
@@ -75,7 +65,7 @@ export default ModalDemo;
 | `style` | object | Custom inline styles for the modal container. |
 | `className` | string | Custom CSS classes for the modal container. |
 
-## 🔄 Control Flow and Structure
+##  Control Flow and Structure
 
 The `BAModal` component simplifies the core interactions of the Ant Design modal:
 

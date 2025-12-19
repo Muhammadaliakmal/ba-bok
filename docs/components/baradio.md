@@ -4,21 +4,11 @@ sidebar_position: 20
 
 # BARadio Component
 
-## Description
-
-The `BARadio` component serves as a wrapper for the Ant Design `<Radio.Group>`, streamlining its use within forms. It provides built-in functionality for displaying a title/label above the radio options and automatically adds a visual asterisk indicator if the field is marked as required.
-
-## 📦 Installation / Import
-
-```javascript
-import BARadio from "@site/src/components/BARadio";
-```
-
-## 🔗 Dependencies
+##  Dependencies
 
 *   **antd**: Provides the core UI components: `<Radio.Group />` and `<Typography />`.
 
-## 🛠️ Usage
+## ️ Usage
 
 The component is controlled, meaning it requires a `value` and an `onChange` handler for state management. The selection options must be provided via the `options` array.
 
@@ -55,7 +45,7 @@ function RadioForm() {
 export default RadioForm;
 ```
 
-## ⚙️ Props
+## ️ Props
 
 | Prop | Type | Description |
 | :--- | :--- | :--- |
@@ -66,7 +56,7 @@ export default RadioForm;
 | `required` | boolean | If true, adds a red asterisk next to the label to indicate a required field. |
 | `disabled` | boolean | Disables the entire radio group, preventing any selection. |
 
-## 🏗️ options Array Structure
+## ️ options Array Structure
 
 Each object in the `options` array must contain the following keys:
 
@@ -75,7 +65,7 @@ Each object in the `options` array must contain the following keys:
 | `label` | `React.ReactNode` \| string | The content displayed next to the radio button. |
 | `value` | any | The unique value returned by `onChange` when this option is selected. |
 
-## ⭐ Labeling and Required Indicator
+##  Labeling and Required Indicator
 
 The `BARadio` component uses Ant Design's `Typography.Title` (level 5) to render the label.
 

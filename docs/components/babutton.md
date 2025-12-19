@@ -6,12 +6,6 @@ sidebar_position: 1
 
 A customizable button component with various styles and sizes.
 
-## Installation
-
-```bash
-npm install basuite
-```
-
 ## Usage
 
 ```jsx
